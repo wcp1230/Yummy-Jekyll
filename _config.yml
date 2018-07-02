@@ -6,15 +6,16 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: wcp1230 Theme # ex. I m Chuan
-name: wcp1230 # ex. DONGChuan
+title: 龙城岁月 Theme # ex. I m Chuan
+subtitle: 品味生活，品味人生
+name: 龙城岁月 # ex. DONGChuan
 email: wcp1230@139.com
-location: wcp1230 # ex. Nice, France
-company: wcp1230
-company_url: https://github.com/wcp1230
+#location: wcp1230 # ex. Nice, France
+#company: wcp1230
+#company_url: https://github.com/wcp1230
 github_url: https://github.com/wcp1230 # ex. https://github.com/DONGChuan
 github_username: wcp1230 # ex. DONGChuan
-description: description_of_your_web_site
+description: 本站是龙城岁月的博客，分享技术和生活
 favicon: favicon.png # Image must be in assets/images
 repository: wcp1230/wcp1230.github.io # ex. DONGChuan/DONGChuan.github.io
 
@@ -47,9 +48,13 @@ defaults: []
 kramdown:
   input: GFM
   enable_coderay: true
+  syntax_highlighter: rouge
 
+syntax_highlighter_opts:
+   coderay_line_numbers:  nil
+   
 # Disque
-disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
+#disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
 # Pagination
 paginate: 10
@@ -78,17 +83,44 @@ navs:
     label: About
 
 # Sidebar to show popular repo
-side_bar_repo_limit: 5 # Number of repos to show
+side_bar_repo_limit: 6 # Number of repos to show
 
 # Google Analytics
-analytics :
-  provider : google
-  google :
-      tracking_id : 'tracking_id'  # ex. UA-72165600-X
+#analytics :
+#  provider : google
+#  google :
+#      tracking_id : 'tracking_id'  # ex. UA-72165600-X
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
+skill_software_keywords: [Java, MySQL, Oracle, Design Patterns]
 skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
-skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
-skill_mobile_app_keywords: [Android, Sketch UI Desgin]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, NodeJS, ExpressJS, MongoDB, Redis, PHP,  Boostrap]
+skill_mobile_app_keywords: [vuejs, hyhird app]
+
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: wcp1230
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: wcp1230
+    repo: wcp1230-comments
+    oauth:
+        client_id: 76706e80ed7d95b152ef
+        client_secret: 8c4d9606b908a9bdee4c77c8896010eb101dd0df
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: wcp1230
+    repo: wcp1230-comments
+    clientID: 76706e80ed7d95b152ef
+    clientSecret: 8c4d9606b908a9bdee4c77c8896010eb101dd0df
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : true
